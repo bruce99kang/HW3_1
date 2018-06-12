@@ -18,11 +18,11 @@ public class TaskDbHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         final String SQL_CREATE_WAITLIST_TABLE = "CREATE TABLE " + TaskContract.WaitlistEntry.TABLE_NAME
-                + "("+ TaskContract.WaitlistEntry._ID + "INTEGER PRIMARY KEY AUTOINCREMENT,"+
-                TaskContract.WaitlistEntry.COLUMN_GUEST_NAME + "TEXT NOT NULL, "+
-                TaskContract.WaitlistEntry.COLUMN_PARTY_SIZE + "INTEGER  NOT NULL, "+
-                TaskContract.WaitlistEntry.COLUMN_PHONE + "TEXT NOT NULL, "+
-                TaskContract.WaitlistEntry.COLUMN_TIMESTAMP + "TIMESTAMP DEFAULT CURRENT_TIMESTAMP"+
+                + "("+ TaskContract.WaitlistEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"+
+                TaskContract.WaitlistEntry.COLUMN_GUEST_NAME + " TEXT NOT NULL, "+
+                TaskContract.WaitlistEntry.COLUMN_PARTY_SIZE + " INTEGER  NOT NULL, "+
+                TaskContract.WaitlistEntry.COLUMN_PHONE + " TEXT NOT NULL, "+
+                TaskContract.WaitlistEntry.COLUMN_TIMESTAMP + " TIMESTAMP DEFAULT CURRENT_TIMESTAMP"+
                 ");";
         db.execSQL(SQL_CREATE_WAITLIST_TABLE);
     }
